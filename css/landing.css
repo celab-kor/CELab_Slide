@@ -79,10 +79,12 @@
 }
 
 .button-group {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-md);
-    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    align-items: stretch;
 }
 
 /* 공통 버튼 스타일 */
@@ -127,6 +129,30 @@
     transform: translateY(-4px);
     background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
     box-shadow: 0 8px 24px rgba(156, 39, 176, 0.4);
+}
+
+/* 세 번째 버튼: 에이전틱 워크플로우 지침 (Indigo 그라데이션) */
+.tertiary-button {
+    background: linear-gradient(135deg, #3F51B5 0%, #673AB7 100%);
+    box-shadow: 0 8px 24px rgba(63, 81, 181, 0.3);
+}
+
+.tertiary-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(63, 81, 181, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 네 번째 버튼: MCP 설치 모음 (Accent 그라데이션) */
+.quaternary-button {
+    background: linear-gradient(135deg, #B388FF 0%, #9C27B0 100%);
+    box-shadow: 0 8px 24px rgba(179, 136, 255, 0.3);
+}
+
+.quaternary-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(179, 136, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* 버튼 내부 요소들 */
@@ -197,9 +223,15 @@
         padding: 4% 5%; /* 5% 6% → 4% 5% */
     }
     
+    .button-group {
+        grid-template-columns: 1fr 1fr; /* 2x2 그리드 유지 */
+        gap: var(--spacing-sm);
+        max-width: 600px;
+    }
+    
     .action-button {
-        min-width: 300px;
-        max-width: 400px;
+        min-width: auto; /* 그리드에서 자동 크기 */
+        max-width: none;
         padding: var(--spacing-sm) var(--spacing-md);
     }
     
@@ -220,6 +252,12 @@
 @media (max-width: 480px) {
     .landing-content {
         padding: 3% 4%; /* 4% 5% → 3% 4% */
+    }
+    
+    .button-group {
+        grid-template-columns: 1fr; /* 세로 배치 */
+        gap: var(--spacing-sm);
+        max-width: 320px;
     }
     
     .action-button {
@@ -243,10 +281,6 @@
     .button-arrow {
         margin-left: 0;
         margin-top: var(--spacing-xs);
-    }
-    
-    .button-group {
-        gap: var(--spacing-sm);
     }
     
     .project-info {

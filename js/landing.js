@@ -37,7 +37,9 @@ class LandingPage {
     cacheElements() {
         this.buttons = {
             primary: document.querySelector('.primary-button'),
-            secondary: document.querySelector('.secondary-button')
+            secondary: document.querySelector('.secondary-button'),
+            tertiary: document.querySelector('.tertiary-button'),
+            quaternary: document.querySelector('.quaternary-button')
         };
         
         this.sections = {
@@ -55,7 +57,7 @@ class LandingPage {
         if (this.buttons.primary) {
             this.buttons.primary.addEventListener('click', (e) => {
                 e.preventDefault();
-                this.handlePrimaryButtonClick();
+                this.handleExternalButtonClick(this.buttons.primary, 'https://litt.ly/half_nomad', 'half_nomad_profile');
             });
         }
 
@@ -63,6 +65,22 @@ class LandingPage {
         if (this.buttons.secondary) {
             this.buttons.secondary.addEventListener('click', (e) => {
                 this.handleSecondaryButtonClick(e);
+            });
+        }
+
+        // 세 번째 버튼: 에이전틱 워크플로우 지침 (외부 링크)
+        if (this.buttons.tertiary) {
+            this.buttons.tertiary.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.handleExternalButtonClick(this.buttons.tertiary, 'https://docs.google.com/document/d/1luBcxsYmfYVGKsYXspbXsAJbAziyOc79TVYvGn2q6GM/edit?usp=sharing', 'workflow_guide');
+            });
+        }
+
+        // 네 번째 버튼: MCP 설치 모음 (외부 링크)
+        if (this.buttons.quaternary) {
+            this.buttons.quaternary.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.handleExternalButtonClick(this.buttons.quaternary, 'https://docs.google.com/document/d/1Tma3Qu7xhD5lbNWEzNHKYoF-864wxRg7vSPf4Z45lfs/edit?usp=sharing', 'mcp_installation');
             });
         }
 
@@ -77,21 +95,20 @@ class LandingPage {
         });
     }
 
-    // 첫 번째 버튼 클릭 처리 (하프노마드 소개)
-    handlePrimaryButtonClick() {
-        console.log('👋 하프노마드 소개 링크 클릭');
+    // 외부 링크 버튼 클릭 처리 (일반화된 함수)
+    handleExternalButtonClick(button, url, destination) {
+        console.log(`🔗 외부 링크 클릭: ${destination}`);
         
         // 클릭 애니메이션
-        this.animateButtonClick(this.buttons.primary);
+        this.animateButtonClick(button);
         
         // 외부 링크 열기 (0.2초 후)
         setTimeout(() => {
-            const url = 'https://litt.ly/half_nomad';
             window.open(url, '_blank', 'noopener,noreferrer');
             
-            // 이벤트 추적 (필요시)
+            // 이벤트 추적
             this.trackEvent('external_link_click', {
-                destination: 'half_nomad_profile',
+                destination: destination,
                 url: url
             });
         }, 200);
@@ -150,6 +167,18 @@ class LandingPage {
                 // 숫자 2키나 스페이스바로 두 번째 버튼 클릭
                 if (this.buttons.secondary) {
                     this.buttons.secondary.click();
+                }
+                break;
+            case '3':
+                // 숫자 3키로 세 번째 버튼 클릭
+                if (this.buttons.tertiary) {
+                    this.buttons.tertiary.click();
+                }
+                break;
+            case '4':
+                // 숫자 4키로 네 번째 버튼 클릭
+                if (this.buttons.quaternary) {
+                    this.buttons.quaternary.click();
                 }
                 break;
             case 'Enter':
