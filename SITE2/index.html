@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="비개발자도 #가능 간지나는 슬라이드 '똑딱' 작성법 - 노션 PPT 웹사이트 제작 과정 완전 공개">
+    <meta name="keywords" content="클로드, AI, 슬라이드, 노션, PPT, 웹사이트, 비개발자, MCP">
+    <meta name="author" content="하프노마드 이모카">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="비개발자도 #가능 간지나는 슬라이드 '똑딱' 작성법">
+    <meta property="og:description" content="노션 PPT 웹사이트 제작 과정 완전 공개">
+    <meta property="og:type" content="presentation">
+    
+    <title>재능기부프로젝트 - 클로드 슬라이드 제작법</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slides.css">
+</head>
+<body>
+    <!-- 프로그레스바 -->
+    <div class="progress-container" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar"></div>
+    </div>
+    
+    <!-- 메인 슬라이드 애플리케이션 -->
+    <main class="slides-app" role="main">
+        <!-- 슬라이드 컨테이너 -->
+        <div class="slide-container">
+            
+            <!-- 슬라이드 1: 메인 타이틀 -->
+            <section class="slide active" data-slide="1" data-section="intro" role="tabpanel" aria-labelledby="slide-1-title">
+                <div class="slide-content">
+                    <h1 id="slide-1-title" class="main-title gradient-title">비개발자도 #가능<br>간지나는 슬라이드<br>'똑딱' 작성법</h1>
+                    <p class="subtitle gradient-text">노션 PPT 웹사이트 제작 과정 완전 공개</p>
+                    <p class="presenter-name gradient-text">하프노마드 이모카</p>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 2: 대상과 목적 -->
+            <section class="slide" data-slide="2" data-section="intro" role="tabpanel" aria-labelledby="slide-2-title">
+                <div class="slide-content">
+                    <h1 id="slide-2-title" class="section-title gradient-title">대상과 목적</h1>
+                    <div class="content-group">
+                        <div class="highlight-box">
+                            <h2 class="text-emphasis">🎯 대상</h2>
+                            <p class="body-text">비개발자, 비디자이너이지만<br>AI 도구 활용이 가능한<br>1인 사업가, 마케터, 기획자</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h2 class="text-emphasis">💡 목적</h2>
+                            <p class="body-text">다른 도구 없어도<br><strong>클로드 AI와 MCP를 잘 활용하면</strong><br>실무에서 쓰이는 PPT 슬라이드를 만들 수 있음</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 3: 슬라이드도 하나의 제품이 아닐까? -->
+            <section class="slide" data-slide="3" data-section="basic" role="tabpanel" aria-labelledby="slide-3-title">
+                <div class="slide-content">
+                    <h1 id="slide-3-title" class="section-title gradient-title">슬라이드도 하나의 제품이 아닐까?</h1>
+                    <div class="content-list">
+                        <div class="list-item">
+                            <h2 class="text-emphasis">📄 단순한 발표 콘텐츠가 아니라</h2>
+                            <p class="body-text">내 브랜드이자, 나를 담은 제품이다</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🎛️ 모든 콘텐츠는</h2>
+                            <p class="body-text">AI가 아닌 내가 직접 통제하고 관리하겠다는 욕망</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">⚡ 가만히 멈춰 있는 제품은 죽는다</h2>
+                            <p class="body-text">살아 움직여야 한다</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 4: 대체 도구들의 한계 -->
+            <section class="slide" data-slide="4" data-section="basic" role="tabpanel" aria-labelledby="slide-4-title">
+                <div class="slide-content">
+                    <h1 id="slide-4-title" class="section-title gradient-title">대체 도구들의 한계</h1>
+                    <div class="content-list">
+                        <div class="list-item">
+                            <h2 class="text-emphasis">📝 Notion</h2>
+                            <p class="body-text">대규모 비즈니스 PT에 적당하지 않음<br>(로딩 속도, 디자인 제약)</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🎨 Canva</h2>
+                            <p class="body-text">고품질의 슬라이드 제작 시<br>수동 작업의 불편함은 여전</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🤖 젠스파크, 감마, 마누스 등 AI 에이전트</h2>
+                            <ul class="sub-list">
+                                <li>퀄리티는 우수하나 통제권이 적음: 내 것이 아닌 느낌</li>
+                                <li>복불복의 성격이 강함: 퀄리티의 고저가 뚜렷</li>
+                                <li>아예 초보자가 사용하거나, 고수가 사용해야 퍼포먼스 좋음</li>
+                                <li>무한대로 사용할 수 없는 제약: 사용할 수록 비용 증가</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 5: 웹 방식을 선택한 이유 -->
+            <section class="slide" data-slide="5" data-section="basic" role="tabpanel" aria-labelledby="slide-5-title">
+                <div class="slide-content">
+                    <h1 id="slide-5-title" class="section-title gradient-title">웹 방식을 선택한 이유</h1>
+                    <div class="content-list">
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🌐 웹 방식이 강력한 점</h2>
+                            <p class="body-text">반응형, 인터랙티브, URL 배포 및 공유, SEO 최적화</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🎯 내가 직접 프로젝트를 주도할 수 있음</h2>
+                            <p class="body-text">AI는 에이전트 역할</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🔥 클로드의 뛰어난 코딩 실력과 기능</h2>
+                            <ul class="sub-list">
+                                <li>프로젝트와 아티팩트</li>
+                                <li>클로드 MCP로 외부 툴 연동하여 IDE 처럼 사용 가능</li>
+                                <li>가성비 좋은 사용량</li>
+                            </ul>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">💎 네 "웹사이트" 처럼 만들면 이것은 온전히 나의 소유</h2>
+                            <p class="body-text">슬라이드를 디자인한다는 느낌보다 내 제품을 제작한다는 느낌</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 6: 실제 슬라이드 시연 -->
+            <section class="slide" data-slide="6" data-section="basic" role="tabpanel" aria-labelledby="slide-6-title">
+                <div class="slide-content">
+                    <h1 id="slide-6-title" class="section-title gradient-title">실제 슬라이드 시연</h1>
+                    <div class="demo-section">
+                        <div class="highlight-box large">
+                            <h2 class="text-emphasis">🎬 데모 사이트</h2>
+                            <p class="body-text">이전에 제작한 노션 PPT 슬라이드</p>
+                            <a href="https://half-nomad.github.io/Notion-PPT/" target="_blank" class="demo-link">
+                                📖 half-nomad.github.io/Notion-PPT/
+                            </a>
+                        </div>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <h3 class="text-emphasis">⚡ 업데이트와 개선 가능</h3>
+                                <p class="helper-text">지속적인 데이터 업데이트 가능</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3 class="text-emphasis">♻️ 재사용 가능</h3>
+                                <p class="helper-text">잘 구축된 웹사이트의 코드는 다른 코드에 재사용 가능</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3 class="text-emphasis">🤖 AI 최적화</h3>
+                                <p class="helper-text">AI로 하여금 제일 콘텐츠를 잘 이해하도록 할 수 있음</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 7: 클로드 프로젝트 활용 -->
+            <section class="slide" data-slide="7" data-section="advanced" role="tabpanel" aria-labelledby="slide-7-title">
+                <div class="slide-content">
+                    <h1 id="slide-7-title" class="section-title gradient-title">클로드 프로젝트 활용</h1>
+                    <div class="content-list">
+                        <div class="list-item">
+                            <h2 class="text-emphasis">📋 프로젝트 지침을 명확하게 설계</h2>
+                            <p class="body-text">시스템 프롬프트<br>어떻게 해야할지 잘모를 때는 직접 만들어달라고 요청</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">👥 멀티 페르소나 - 에이전틱 워크플로우</h2>
+                            <p class="body-text">개인적으로 복잡한 프로젝트는<br><strong>5명의 전문가 팀 시뮬레이션</strong><br>각 전문가별 역할 툴 및 협업 방식 정의</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 8: 체계적인 기획 프로세스 -->
+            <section class="slide" data-slide="8" data-section="advanced" role="tabpanel" aria-labelledby="slide-8-title">
+                <div class="slide-content">
+                    <h1 id="slide-8-title" class="section-title gradient-title">체계적인 기획 프로세스</h1>
+                    <div class="process-steps">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">슬라이드 기획서 및 목차 구조</h2>
+                                <p class="body-text">디테일하게 구성<br>(도메인 지식과 준비가 중요)</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">기획서 바탕으로 강의 슬라이드 콘텐츠</h2>
+                                <p class="body-text">제작</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">디자인 시스템 가이드</h2>
+                                <p class="body-text">설정</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">작업 타임라인과 체크리스트</h2>
+                                <p class="body-text">체계 구축</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 9: MCP란 무엇인가 -->
+            <section class="slide" data-slide="9" data-section="development" role="tabpanel" aria-labelledby="slide-9-title">
+                <div class="slide-content">
+                    <h1 id="slide-9-title" class="section-title gradient-title">MCP란 무엇인가</h1>
+                    <div class="content-list">
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🔌 MCP (Model Context Protocol)</h2>
+                            <p class="body-text">AI 모델(Claude)이 외부 애플리케이션과<br>연결할 수 있게 해주는 도구</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">📱 USB-C 포트처럼</h2>
+                            <p class="body-text">하나의 표준으로 다양한 도구들을 연결하는 역할<br>Claude가 파일시스템, 데이터베이스, 웹사이트 등에 접근 가능</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">📅 2024년 11월 공개</h2>
+                            <p class="body-text">Claude 운영사인 Anthropic에서 오픈소스로 공개<br>Claude Desktop 앱을 비롯한 AI 도구에서 주로 활용</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">⚡ 실제 업무 자동화</h2>
+                            <p class="body-text">Claude가 단순 대화를 넘어 파일 관리, 웹사이트 검색,<br>노션 연동, 디자인 데이터 가져오기 등 수행 가능</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 10: 사용된 MCP 도구의 역할 -->
+            <section class="slide" data-slide="10" data-section="development" role="tabpanel" aria-labelledby="slide-10-title">
+                <div class="slide-content">
+                    <h1 id="slide-10-title" class="section-title gradient-title">사용된 MCP 도구의 역할</h1>
+                    <div class="tools-grid">
+                        <div class="tool-item essential">
+                            <h2 class="text-emphasis">💻 Desktop Commander</h2>
+                            <p class="body-text">로컬 컴퓨터 관리, 파일 생성 및 검색,<br>터미널 명령 (깃, 깃허브 푸시)</p>
+                            <span class="badge essential-badge">필수</span>
+                        </div>
+                        <div class="tool-item essential">
+                            <h2 class="text-emphasis">🌐 playwright-stealth</h2>
+                            <p class="body-text">라이브 테스트, 정보 크롤링</p>
+                            <span class="badge essential-badge">필수</span>
+                        </div>
+                        <div class="tool-item essential">
+                            <h2 class="text-emphasis">📝 text-editor</h2>
+                            <p class="body-text">세밀한 코드 작성, 수정</p>
+                            <span class="badge essential-badge">필수</span>
+                        </div>
+                        <div class="tool-item">
+                            <h2 class="text-emphasis">🧠 Sequential-thinking</h2>
+                            <p class="body-text">기획이나 복잡한 단계 전에 깊은 사고</p>
+                        </div>
+                        <div class="tool-item">
+                            <h2 class="text-emphasis">📚 context7</h2>
+                            <p class="body-text">최신 기술 정보 및 DOCS 문서 열람</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 11: 디자인 시스템 가이드 개발 -->
+            <section class="slide" data-slide="11" data-section="development" role="tabpanel" aria-labelledby="slide-11-title">
+                <div class="slide-content">
+                    <h1 id="slide-11-title" class="section-title gradient-title">디자인 시스템 가이드 개발</h1>
+                    <div class="content-list">
+                        <div class="list-item">
+                            <h2 class="text-emphasis">📐 슬라이드의 통일성</h2>
+                            <p class="body-text">레이아웃 그리드와 간격 - 7레벨 계층구조<br>(제목-본문-보조 등)</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🎨 브랜드 컬러 팔레트</h2>
+                            <p class="body-text">블랙/화이트 + 퍼플 핑크</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">✍️ 타이포그래피 체계</h2>
+                            <p class="body-text">Pretendard 폰트 사용</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">📱 반응형 고려</h2>
+                            <p class="body-text">슬라이드 사이즈: 4:3 비율<br>모바일 디자인도 반드시 염두<br>인포그래픽, 인터랙티브 요소 여부</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 12: 슬라이드 제작 - 샘플 제작 -->
+            <section class="slide" data-slide="12" data-section="development" role="tabpanel" aria-labelledby="slide-12-title">
+                <div class="slide-content">
+                    <h1 id="slide-12-title" class="section-title gradient-title">슬라이드 제작 - 샘플 제작</h1>
+                    <div class="process-steps">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">프로젝트 지식 첨부</h2>
+                                <p class="body-text">생성된 기획안과 디자인 시스템 가이드,<br>체크리스트를 프로젝트 지식으로 첨부</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">아티팩트로 샘플페이지 제작</h2>
+                                <p class="body-text">HTML, CSS, JS 로 샘플페이지를 제작<br>(약 4-6 페이지 정도)</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">디자인 가이드 확인</h2>
+                                <p class="body-text">디자인 가이드에 맞는 지 확인 (중요!!)</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">프로젝트 폴더 생성</h2>
+                                <p class="body-text">내 컴퓨터에 프로젝트 폴더 생성:<br>데스크톱커맨더 MCP가 관리<br>project plan.md 생성 후 로컬 폴더에 저장</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 13: 슬라이드 제작 - 전체 슬라이드 -->
+            <section class="slide" data-slide="13" data-section="development" role="tabpanel" aria-labelledby="slide-13-title">
+                <div class="slide-content">
+                    <h1 id="slide-13-title" class="section-title gradient-title">슬라이드 제작 - 전체 슬라이드</h1>
+                    <div class="content-list">
+                        <div class="list-item">
+                            <h2 class="text-emphasis">✅ 초반 샘플 페이지 검수</h2>
+                            <p class="body-text">원하는 디자인이 나오는 경우</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">📝 Text-editor MCP 활용</h2>
+                            <p class="body-text">위 아티팩트를 파일 생성 후<br>위 로컬 폴더에 저장</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🔄 부분별 제작</h2>
+                            <p class="body-text">디자인 시스템이 맞춰지면,<br>부분을 나눠서 제작 진행<br>작업 완료 시 체크리스트 수정</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🔍 검수 과정</h2>
+                            <p class="body-text">부분 완료 후 개별 페이지를<br>로컬, 모바일(F12 개발자도구)환경에서 검수</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 14: 슬라이드 제작 - 추가 기능 및 디버깅 -->
+            <section class="slide" data-slide="14" data-section="development" role="tabpanel" aria-labelledby="slide-14-title">
+                <div class="slide-content">
+                    <h1 id="slide-14-title" class="section-title gradient-title">추가 기능 및 디버깅</h1>
+                    <div class="content-grid">
+                        <div class="content-section">
+                            <h2 class="text-emphasis">🚀 빌드업 하면서 기능 추가</h2>
+                            <ul class="feature-list">
+                                <li>키보드 네비게이션: 실패</li>
+                                <li>반응형 사이즈: 4:3</li>
+                                <li>인터랙티브 및 애니메이션 효과</li>
+                                <li>이미지 추가</li>
+                            </ul>
+                        </div>
+                        <div class="content-section">
+                            <h2 class="text-emphasis">🔧 제작은 20%, 오류 수정은 80%</h2>
+                            <div class="highlight-box">
+                                <h3 class="text-emphasis">마법의 단어</h3>
+                                <p class="body-text">(보여주고) <strong>"에러났어 고쳐줘"</strong></p>
+                                <ul class="debug-steps">
+                                    <li>화면 캡쳐 or 링크 주고 확인</li>
+                                    <li>Playwright-stealth로 확인, 시연 요청</li>
+                                    <li>특정 라이브러리나 프레임워크 사용 시:<br>context7 확인하라고 요청</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 15: 깃 설치와 커밋 -->
+            <section class="slide" data-slide="15" data-section="deploy" role="tabpanel" aria-labelledby="slide-15-title">
+                <div class="slide-content">
+                    <h1 id="slide-15-title" class="section-title gradient-title">깃 설치와 커밋</h1>
+                    <div class="content-list">
+                        <div class="list-item">
+                            <h2 class="text-emphasis">💾 Git 버전 관리는 매우 중요</h2>
+                            <p class="body-text">게임의 Save와 Load의 개념</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">🤖 Git 잘몰라도 된다</h2>
+                            <p class="body-text">AI에게 물어보고 시키자</p>
+                        </div>
+                        <div class="list-item">
+                            <h2 class="text-emphasis">⏰ 틈틈히 커밋</h2>
+                            <p class="body-text">슬라이드 제작중에 큰 작업 완료 이후 틈틈히</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h3 class="text-emphasis">💡 핵심 포인트</h3>
+                            <p class="body-text">작은 단위로 자주 커밋하는 습관이<br>나중에 문제가 생겼을 때 구원해준다</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 16: 깃허브 무료 가입과 레포지토리 생성 -->
+            <section class="slide" data-slide="16" data-section="deploy" role="tabpanel" aria-labelledby="slide-16-title">
+                <div class="slide-content">
+                    <h1 id="slide-16-title" class="section-title gradient-title">깃허브 무료 가입과 레포지토리 생성</h1>
+                    <div class="process-steps">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">Github 무료 가입</h2>
+                                <p class="body-text">레포지토리 생성: 잘모르면 물어본다</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">깃 커밋을 깃허브에 "푸시"</h2>
+                                <p class="body-text">내 로컬 파일이 온라인 상 업로드 및 공개</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">깃허브 페이지에 연결</h2>
+                                <p class="body-text">드디어 "배포"</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h2 class="text-emphasis">Github MCP 연결</h2>
+                                <p class="body-text">이 과정을 클로드에서 가능!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 17: MCP를 활용해 디버깅 하기 -->
+            <section class="slide" data-slide="17" data-section="tips" role="tabpanel" aria-labelledby="slide-17-title">
+                <div class="slide-content">
+                    <h1 id="slide-17-title" class="section-title gradient-title">MCP를 활용해 디버깅 하기</h1>
+                    <div class="debug-methods">
+                        <div class="method-item highlight-box">
+                            <h2 class="text-emphasis">✨ 마법의 단어</h2>
+                            <p class="body-text">(화면 캡쳐 or 링크 주고)<br><strong>"에러났어 고쳐줘"</strong></p>
+                        </div>
+                        <div class="method-item">
+                            <h2 class="text-emphasis">🎭 Playwright-stealth 활용</h2>
+                            <p class="body-text">확인, 시연 요청</p>
+                        </div>
+                        <div class="method-item">
+                            <h2 class="text-emphasis">📚 Context7 활용</h2>
+                            <p class="body-text">특정 라이브러리나 프레임워크 사용 시<br>context7 확인하라고 요청</p>
+                        </div>
+                        <div class="tip-box">
+                            <h3 class="text-emphasis">💡 디버깅 팁</h3>
+                            <p class="body-text">구체적인 에러 상황을 보여주는 것이<br>가장 빠른 해결책</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 18: 대화창 간의 맥락 유지 하기 -->
+            <section class="slide" data-slide="18" data-section="tips" role="tabpanel" aria-labelledby="slide-18-title">
+                <div class="slide-content">
+                    <h1 id="slide-18-title" class="section-title gradient-title">대화창 간의 맥락 유지 하기</h1>
+                    <div class="content-sections">
+                        <div class="section-box">
+                            <h2 class="text-emphasis">📋 프로젝트 플랜 파일 활용</h2>
+                            <ul class="feature-list">
+                                <li>항상 대화 처음 확인하도록 함</li>
+                                <li>대화 마무리 시 업데이트 하도록 함</li>
+                                <li>체크리스트 파일 별도 활용</li>
+                            </ul>
+                        </div>
+                        <div class="section-box">
+                            <h2 class="text-emphasis">🔄 대화가 끊길 경우</h2>
+                            <p class="body-text">마지막 대화를 복사해서<br>새 대화창에 붙여 넣기</p>
+                            <ul class="sub-steps">
+                                <li>프로젝트 플랜과 체크리스트 업데이트 못했을 경우</li>
+                                <li>필요시 전체 대화 전달 가능</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 19: 긴 작업 시 클로드와의 대화법 -->
+            <section class="slide" data-slide="19" data-section="tips" role="tabpanel" aria-labelledby="slide-19-title">
+                <div class="slide-content">
+                    <h1 id="slide-19-title" class="section-title gradient-title">긴 작업 시 클로드와의 대화법</h1>
+                    <div class="conversation-tips">
+                        <div class="tip-item highlight-box">
+                            <h2 class="text-emphasis">📝 작업 목적과 순서 목록</h2>
+                            <p class="body-text">먼저 만들게 한 후<br>한 작업씩 작업하고 <strong>"대기"</strong>하라고 함</p>
+                        </div>
+                        <div class="tip-item">
+                            <h2 class="text-emphasis">🤔 어떤 것을 해야할 지 모를 경우</h2>
+                            <p class="body-text">다음 작업 우선순위를<br>추천해달라고 함</p>
+                        </div>
+                        <div class="best-practice">
+                            <h3 class="text-emphasis">💡 베스트 프랙티스</h3>
+                            <ul class="practice-list">
+                                <li><strong>명확한 지시</strong>: "이것만 하고 멈춰"</li>
+                                <li><strong>단계적 접근</strong>: 큰 작업을 작은 단위로</li>
+                                <li><strong>확인 요청</strong>: "다음에 뭘 해야 할까?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 20: 비개발자도 클로드 하나만으로 -->
+            <section class="slide" data-slide="20" data-section="conclusion" role="tabpanel" aria-labelledby="slide-20-title">
+                <div class="slide-content">
+                    <h1 id="slide-20-title" class="main-title gradient-title">"비개발자도 오로지<br>클로드 하나만으로<br>상용화 웹사이트 서비스를<br>만들 수 있다"</h1>
+                    <div class="conclusion-points">
+                        <h2 class="subtitle gradient-text">앞으로 더 좋은 AI 도구와 에이전트가 나와도:</h2>
+                        <div class="points-grid">
+                            <div class="point-item">
+                                <div class="point-number">1</div>
+                                <div class="point-content">
+                                    <h3 class="text-emphasis">완전한 소유권</h3>
+                                    <p class="body-text">내가 만든 것은 100% 내 것</p>
+                                </div>
+                            </div>
+                            <div class="point-item">
+                                <div class="point-number">2</div>
+                                <div class="point-content">
+                                    <h3 class="text-emphasis">무제한 커스터마이징</h3>
+                                    <p class="body-text">원하는 대로 수정하고 확장 가능</p>
+                                </div>
+                            </div>
+                            <div class="point-item">
+                                <div class="point-number">3</div>
+                                <div class="point-content">
+                                    <h3 class="text-emphasis">비용 제약 없음</h3>
+                                    <p class="body-text">한 번 만들면 평생 무료 사용</p>
+                                </div>
+                            </div>
+                            <div class="point-item">
+                                <div class="point-number">4</div>
+                                <div class="point-content">
+                                    <h3 class="text-emphasis">학습과 성장</h3>
+                                    <p class="body-text">과정을 통해 얻는 지식과 경험</p>
+                                </div>
+                            </div>
+                            <div class="point-item">
+                                <div class="point-number">5</div>
+                                <div class="point-content">
+                                    <h3 class="text-emphasis">브랜드 차별화</h3>
+                                    <p class="body-text">남들과 다른 나만의 독특한 결과물</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 슬라이드 21: Outro -->
+            <section class="slide" data-slide="21" data-section="conclusion" role="tabpanel" aria-labelledby="slide-21-title">
+                <div class="slide-content">
+                    <h1 id="slide-21-title" class="main-title gradient-title">Outro</h1>
+                    <div class="outro-messages">
+                        <div class="message-item highlight-box large">
+                            <h2 class="text-emphasis">"도구에 의존하지 않고<br>도구를 활용하는 차이"</h2>
+                        </div>
+                        <div class="message-item highlight-box large">
+                            <h2 class="text-emphasis">"소비자에서<br>창작자로의 전환"</h2>
+                        </div>
+                        <div class="message-item highlight-box large">
+                            <h2 class="text-emphasis">"AI 시대에도<br>직접 만드는 능력의 가치"</h2>
+                        </div>
+                    </div>
+                    <div class="final-message">
+                        <p class="presenter-name gradient-text">감사합니다!</p>
+                        <p class="helper-text">하프노마드 이모카</p>
+                        <a href="https://litt.ly/half_nomad" target="_blank" class="contact-link">
+                            📖 litt.ly/half_nomad
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        
+        <!-- 네비게이션 버튼 -->
+        <nav class="slide-nav" role="navigation" aria-label="슬라이드 네비게이션">
+            <button class="nav-btn prev-btn" aria-label="이전 슬라이드" title="이전 슬라이드 (←)">
+                <span aria-hidden="true">←</span>
+            </button>
+            <button class="nav-btn next-btn" aria-label="다음 슬라이드" title="다음 슬라이드 (→)">
+                <span aria-hidden="true">→</span>
+            </button>
+        </nav>
+        
+        <!-- 슬라이드 카운터 -->
+        <div class="slide-counter" role="status" aria-live="polite">
+            <span class="current">1</span> / <span class="total">21</span>
+        </div>
+        
+        <!-- 홈 버튼 -->
+        <a href="index.html" class="home-btn" aria-label="메인 페이지로 돌아가기" title="메인 페이지">
+            <span aria-hidden="true">🏠</span>
+        </a>
+    </main>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+</html>
